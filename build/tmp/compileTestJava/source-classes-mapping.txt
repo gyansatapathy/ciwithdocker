@@ -1,2 +1,0 @@
-com/gs/ci/ciwithdocker/CiwithdockerApplicationTests.java
- com.gs.ci.ciwithdocker.CiwithdockerApplicationTests
