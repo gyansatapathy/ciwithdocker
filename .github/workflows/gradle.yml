@@ -23,7 +23,7 @@ jobs:
         distribution: 'adopt'
     - name: Get Tag date
       id: current_date
-      run: echo "::set-output name=date::$(date +'%Y-%m-%d-%s')"
+      run: echo $(date '+%Y-%m-%d-%H%M%S')
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
