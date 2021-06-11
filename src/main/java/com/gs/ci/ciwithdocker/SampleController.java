@@ -13,7 +13,7 @@ public class SampleController {
 
     @GetMapping("/greet")
     public String greet(HttpServletRequest httpServletRequest) {
-        return String.format("Hello Mate, You are calling from: %s This is from docker container with os: %s and time: %s and hosted in: %s",
+        return String.format("Hello Mate, You are calling from: %s This is from docker container with os: %s and time: %s and hosted in: %s ",
                 httpServletRequest.getRemoteAddr(),
                 System.getProperties().get("os.name"), LocalDateTime.now(),
                 System.getProperties().get("user.timezone"));
