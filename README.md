@@ -1,3 +1,4 @@
 # CI with Docker and Github Actions
 
-##### Will update descriptions shortly.
+##### Head over to https://gyansatapathy.medium.com/ci-with-github-actions-a4c6a8b7cca1 :)
+
