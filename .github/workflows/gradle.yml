@@ -41,7 +41,7 @@ jobs:
         file: ./Dockerfile
         builder: ${{ steps.buildx.outputs.name }}
         push: true
-        tags:  ${{ secrets.DOCKER_HUB_USERNAME }}/ciwithgithubaction:${{ steps.date.outputs.current_date }}
+        tags:  ${{ secrets.DOCKER_HUB_USERNAME }}/ciwithgithubaction:${{ steps.current_date.outputs }}
     - name: Image Digest
       run: echo ${{ steps.docker_build.outputs.digest }}
 
