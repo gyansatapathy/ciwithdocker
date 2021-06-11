@@ -21,6 +21,9 @@ jobs:
       with:
         java-version: '11'
         distribution: 'adopt'
+    - name: Get Tag date
+      id: current_date
+      run: echo "::set-output name=date::$(date +'%Y-%m-%d-%s')"
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
@@ -38,7 +41,7 @@ jobs:
         file: ./Dockerfile
         builder: ${{ steps.buildx.outputs.name }}
         push: true
-        tags:  ${{ secrets.DOCKER_HUB_USERNAME }}/ciwithgithubaction:latest
+        tags:  ${{ secrets.DOCKER_HUB_USERNAME }}/ciwithgithubaction:${{ steps.date.outputs.current_date }}
     - name: Image Digest
       run: echo ${{ steps.docker_build.outputs.digest }}
 
